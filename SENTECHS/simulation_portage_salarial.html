@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Formulaire de Simulation de Portage Salarial</title>
+</head>
+
+<body>
+    <header>
+        <div class="pp">
+            <nav>
+                <img style="padding-top: 30px" src="image/a.jpg">
+                <ul>
+                    <a href="espace_membres/inscription.php" class="btn btn-second">S'inscrire</a>
+                    <a href="espace_membres/connexion.php" class="btn btn-primary">Se connecter</a>
+                    <li><a href="./where.html">Nous trouver</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./simulation_portage_salarial.html">Simulation Portage Salarial</a></li>
+                    <li><a href="./portage_salarial.html">Portage salarial</a></li>
+                    <li><a class="active" href="./accueil.html">Accueil</a></li>
+
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="fm">
+        <h1>Simulation de Portage Salarial</h1>
+        <form method="post" action="./traitement.php">
+            <label for="taux_journalier">Taux journalier moyen (en euros) :</label><br><br>
+            <input type="range" id="taux_journalier" name="taux_journalier" min="0" max="2000" value="200">
+            <span id="taux_value">200€ </span><br><br><br>
+
+            <label for="jours_travailles">Nombre de jours travaillés par mois :</label><br><br>
+            <input type="range" id="jours_travailles" name="jours_travailles" min="0" max="30" value="10">
+            <span id="jours_value">10jrs</span><br><br><br>
+
+            <label for="mois"> Nombre de mois :</label><br><br>
+            <input type="range" id="mois" name="mois" min="0" max="12" value="1">
+            <span id="mois_value">1</span><br><br><br>
+
+            <br>
+            <label for="frais_par_jour">Montant de frais facturés par jour :</label><br><br>
+            <input type="range" id="frais_par_jour" name="frais_par_jour" min="0" max="500" value="0">
+            <span id="frais_value">0</span><br><br><br><br>
+
+            <button class="btn btn-third">Calculer</button>
+            <br><br><br><br><br><br><br>
+
+        </form>
+    </div>
+
+    <script>
+
+        // Afficher la valeur du curseur de jours travaillés
+        const joursSlider = document.getElementById("jours_travailles");
+        // console.log("### joursSlider : "+joursSlider.value);
+        const joursValue = document.getElementById("jours_value");
+
+        joursSlider.addEventListener("input", function () {
+            joursValue.innerHTML = this.value + "jrs";
+        });
+        // Afficher la valeur du curseur des mois
+        const moisSlider = document.getElementById("mois");
+        const moisValue = document.getElementById("mois_value");
+
+        moisSlider.addEventListener("input", function () {
+            moisValue.innerHTML = this.value;
+        });
+
+        // Afficher la valeur du curseur de taux journalier moyen
+        const tauxSlider = document.getElementById("taux_journalier");
+        const tauxValue = document.getElementById("taux_value");
+
+        tauxSlider.addEventListener("input", function () {
+            tauxValue.innerHTML = this.value + "€ ";
+        });
+
+        // Afficher la valeur du curseur de frais /jour
+        const fraisSlider = document.getElementById("frais_par_jour");
+        const fraisValue = document.getElementById("frais_value");
+
+        fraisSlider.addEventListener("input", function () {
+            fraisValue.innerHTML = this.value + "";
+        });
+
+
+    </script>
+    <footer class="footer" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="footer-logo">
+            <strong>
+                <p style="font-size: 60px; margin-left: 50px;">SENTECHS</p>
+            </strong>
+            <ul style="list-style: none; padding: 0; margin-left: 50px;">
+                <li style="margin: 5px 0;"><a href="./where.html">Nous trouver</a></li>
+                <li style="margin: 5px 0;"><a href="./contact.html">Contact</a></li>
+                <li style="margin: 5px 0;"><a href="./simulation_portage_salarial.html">Simulation Portage Salarial</a>
+                </li>
+                <li style="margin: 5px 0;"><a href="./portage_salarial.html">Portage salarial</a></li>
+            </ul>
+        </div>
+        <div class="footer-label">
+            <strong>
+                <p style="margin-left: 10px; font-size: 30px">Label <br>du portage salarial</p>
+            </strong><br>
+            <img src="image/LOGO-LABEL-PEPS-RVB-300x278.png" alt="Logo PEPS" style="max-width: 100%; height: 150px;">
+        </div>
+        <div class="social-icons">
+            <strong>
+                <p style="margin-right: 50px;">Réseaux sociaux</p>
+            </strong><br>
+            <i class="fa-brands fa-square-facebook" style="margin-right: 10px;"></i>
+            <i class="fa-brands fa-square-twitter" style="margin-right: 10px;"></i>
+            <i class="fa-brands fa-square-instagram" style="margin-right: 10px;"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+    </footer>
+</body>
+
+</html>

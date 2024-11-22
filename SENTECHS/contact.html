@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://kit.fontawesome.com/00af2a20e0.js" crossorigin="anonymous"></script>
+    <link href="./icones/all.css" rel="stylesheet">
+    <!-- CSS Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"
+        integrity="...">
+
+    <!-- JS Bootstrap (optionnel, pour les fonctionnalités JavaScript) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="..."
+        defer></script>
+
+    <title>Accueil</title>
+</head>
+
+<body>
+    <header>
+        <div class="pp">
+            <nav>
+                <img style="padding-top: 30px" src="./image/a.jpg">
+                <ul>
+                    <a href="espace_membres/inscription.php" class="btn btn-second">S'inscrire</a>
+                    <a href="espace_membres/connexion.php" class="btn btn-primary">Se connecter</a>
+                    <li><a href="./where.html">Nous trouver</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./simulation_portage_salarial.html">Simulation Portage Salarial</a></li>
+                    <li><a href="./portage_salarial.html">Portage salarial</a></li>
+                    <li><a class="active" href="./accueil.html">Accueil</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="contact">
+            <h1>Nous contacter</h1>
+            <p>Précisez-nous votre situation afin que nous puissions vous faire une proposition adaptée</p>
+            <img src="image/contact-min.jpg" alt="Nous contacter">
+        </div>
+        <div class="fm-contact">
+            <form method="post" action="./contact.php">
+                <h1>Contact</h1>
+                <label for="prenom">Prénom</label>
+                <input required type="text" name="prenom" id="prenom" placeholder="Prénom"><br><br>
+                <label for="nom">Nom</label>
+                <input required type="text" name="nom" id="nom" placeholder="Nom"><br><br>
+                <label for="email">Email</label>
+                <input required type="email" name="email" id="email" placeholder="Email"><br><br>
+                <label for="telephone">Téléphone</label>
+                <input required type="tel" id="telephone" name="telephone" pattern="[0-9]{10}"
+                    placeholder="Téléphone"><br><br>
+                <label for="activite">Votre activité</label><br><br>
+                <select name="activite" id="activite" required>
+                    <option value="">-----------</option>
+                    <option value="consultant">CONSULTANT / MANAGER DE TRANSITION</option>
+                    <option value="formateur">FORMATEUR / COACH</option>
+                    <option value="artisan">ARTISAN</option>
+                    <option value="autre">Autre</option>
+                </select><br><br>
+                <label for="tjm">TJM</label><br>
+                <input required type="number" name="tjm" id="tjm" placeholder="TJM"><br><br>
+                <label for="competences">Compétences</label><br><br>
+                <select name="competences" id="competences" required>
+                    <option value="">-----------</option>
+                    <option value="sante">Santé / QSE</option>
+                    <option value="commercial">Commercial / Business Développement</option>
+                    <option value="comptabilite">Comptabilité</option>
+                    <option value="transport_logistique">Transport logistique</option>
+                    <option value="autre">Autre</option>
+                </select><br><br>
+                <label for="projet">Précisez votre projet</label><br><br>
+                <textarea name="projet" id="projet" required></textarea><br><br>
+                <button type="submit" name="submit">SOUMETTRE</button>
+            </form><br><br>
+            <p class="cc">Nous sommes disponibles pour répondre à toutes vos questions de 9h à 18h du lundi au
+                vendredi<br><br>
+                babacar.diouf@sentechs.fr<br>
+                01 00 00 00 00 | 06 00 00 00 00</p>
+        </div>
+    </section>
+    <footer class="footer"
+        style="display: flex; justify-content: space-between; align-items: center;margin-top: 1100px;">
+        <div class="footer-logo">
+            <strong>
+                <p style="font-size: 60px; margin-left: 50px;">SENTECHS</p>
+            </strong>
+            <ul style="list-style: none; padding: 0; margin-left: 50px;">
+                <li style="margin: 5px 0;"><a href="./where.html">Nous
+                        trouver</a></li>
+                <li style="margin: 5px 0;"><a href="./contact.html">Contact</a></li>
+                <li style="margin: 5px 0;"><a href="./simulation_portage_salarial.html">Simulation
+                        Portage Salarial</a></li>
+                <li style="margin: 5px 0;"><a href="./portage_salarial.html">Portage salarial</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-label">
+            <strong>
+                <p style="margin-left: 10px; font-size: 30px">Label <br>du portage salarial</p>
+            </strong><br>
+            <img src="./image/LOGO-LABEL-PEPS-RVB-300x278.png" alt="Logo PEPS" style="max-width: 100%; height: 150px;">
+        </div>
+        <div class="social-icons">
+            <strong>
+                <p style="margin-right: 50px;">Réseaux sociaux</p>
+            </strong><br>
+            <i class="fa-brands fa-square-facebook" style="margin-right: 10px;" aria-hidden="true"></i>
+            <i class="fa-brands fa-square-twitter" style="margin-right: 10px;" aria-hidden="true"></i>
+            <i class="fa-brands fa-square-instagram" style="margin-right: 10px;" aria-hidden="true"></i>
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        </div>
+    </footer>
+</body>
+
+
+</html>
